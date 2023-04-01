@@ -1,57 +1,227 @@
 {
-    "cpuPerformance": {
-        "position": 1,
-        "title": "CPU Performance",
-        "value": "80%",
-        "icon": "cpu",
-        "color": "#36a2eb"
+    "dashboard-1": {
+        "cpuPerformance": {
+            "_id": "7840a682-7dcf-406a-8e3a-840150d7f9d9",
+            "position": 1,
+            "title": "CPU Performance",
+            "value": "80%",
+            "icon": "cpu",
+            "color": "#36a2eb"
+        },
+        "cost": {
+            "_id": "7f79d0e3-0f3a-4613-8743-d1e53dd8a140",
+            "position": 2,
+            "title": "Cost",
+            "value": "$500",
+            "icon": "dollar-sign",
+            "color": "#ff6384"
+        },
+        "memory": {
+            "_id": "d2c0cced-42fc-4e6f-befe-21f1faea27b6",
+            "position": 3,
+            "title": "Memory",
+            "value": "8GB",
+            "icon": "database",
+            "color": "#ffcd56"
+        },
+        "pieChart": {
+            "_id": "a20fb0f9-8296-4f5a-b4c4-4c4d64c4a316",
+            "position": 4,
+            "title": "Sales by Region",
+            "data": [
+                {
+                    "label": "North",
+                    "value": 30
+                },
+                {
+                    "label": "South",
+                    "value": 25
+                },
+                {
+                    "label": "East",
+                    "value": 20
+                },
+                {
+                    "label": "West",
+                    "value": 25
+                }
+            ],
+            "colorScheme": "pastel"
+        },
+        "randomList": {
+            "_id": "74d3d3a7-92a1-4c8a-99f8-836ef1336c12",
+            "position": 5,
+            "title": "Random List",
+            "items": [
+                "Item 1",
+                "Item 2",
+                "Item 3",
+                "Item 4",
+                "Item 5"
+            ]
+        }
     },
-    "cost": {
-        "position": 2,
-        "title": "Cost",
-        "value": "$500",
-        "icon": "dollar-sign",
-        "color": "#ff6384"
-    },
-    "memory": {
-        "position": 3,
-        "title": "Memory",
-        "value": "8GB",
-        "icon": "database",
-        "color": "#ffcd56"
-    },
-    "pieChart": {
-        "position": 4,
-        "title": "Sales by Region",
-        "data": [
-            {
-                "label": "North",
-                "value": 30
-            },
-            {
-                "label": "South",
-                "value": 25
-            },
-            {
-                "label": "East",
-                "value": 20
-            },
-            {
-                "label": "West",
-                "value": 25
-            }
-        ],
-        "colorScheme": "pastel"
-    },
-    "position": 5,
-    "randomList": {
-        "title": "Random List",
-        "items": [
-            "Item 1",
-            "Item 2",
-            "Item 3",
-            "Item 4",
-            "Item 5"
-        ]
+    "dashboard-2": {
+        "lineGraph": {
+            "_id": "8d6ba3a3-02a6-4f2a-a0ea-5f6d7f89a38a",
+            "position": 1,
+            "title": "Line Graph",
+            "data": [
+                {
+                    "x": "Jan",
+                    "y": 10
+                },
+                {
+                    "x": "Feb",
+                    "y": 20
+                },
+                {
+                    "x": "Mar",
+                    "y": 15
+                },
+                {
+                    "x": "Apr",
+                    "y": 25
+                },
+                {
+                    "x": "May",
+                    "y": 30
+                },
+                {
+                    "x": "Jun",
+                    "y": 28
+                },
+                {
+                    "x": "Jul",
+                    "y": 35
+                },
+                {
+                    "x": "Aug",
+                    "y": 42
+                },
+                {
+                    "x": "Sep",
+                    "y": 38
+                },
+                {
+                    "x": "Oct",
+                    "y": 45
+                },
+                {
+                    "x": "Nov",
+                    "y": 50
+                },
+                {
+                    "x": "Dec",
+                    "y": 48
+                }
+            ],
+            "xAxisLabel": "Months",
+            "yAxisLabel": "Sales",
+            "color": "#4CAF50"
+        },
+        "barGraph": {
+            "_id": "e6b5e40f-0ab4-4f22-8e4d-2dc5a6b4ad6a",
+            "position": 2,
+            "title": "Bar Graph",
+            "data": [
+                {
+                    "x": "North",
+                    "y": 200
+                },
+                {
+                    "x": "South",
+                    "y": 150
+                },
+                {
+                    "x": "East",
+                    "y": 180
+                },
+                {
+                    "x": "West",
+                    "y": 120
+                }
+            ],
+            "xAxisLabel": "Regions",
+            "yAxisLabel": "Sales",
+            "color": "#FFC107"
+        },
+        "tabularData": {
+            "_id": "02d2e80c-6675-4288-aabc-0d23451a7f71",
+            "position": 3,
+            "title": "Tabular Data",
+            "data": [
+                {
+                    "id": 1,
+                    "name": "John Doe",
+                    "age": 30,
+                    "email": "johndoe@example.com"
+                },
+                {
+                    "id": 2,
+                    "name": "Jane Smith",
+                    "age": 25,
+                    "email": "janesmith@example.com"
+                },
+                {
+                    "id": 3,
+                    "name": "Bob Johnson",
+                    "age": 40,
+                    "email": "bobjohnson@example.com"
+                },
+                {
+                    "id": 4,
+                    "name": "Lisa Brown",
+                    "age": 35,
+                    "email": "lisabrown@example.com"
+                }
+            ],
+            "columns": [
+                {
+                    "key": "id",
+                    "header": "ID"
+                },
+                {
+                    "key": "name",
+                    "header": "Name"
+                },
+                {
+                    "key": "age",
+                    "header": "Age"
+                },
+                {
+                    "key": "email",
+                    "header": "Email"
+                }
+            ]
+        },
+        "pieChart": {
+            "_id": "b9b27121-bbfe-4267-9050-214aa3018c33",
+            "position": 4,
+            "title": "Sales by Category",
+            "data": [
+                {
+                    "label": "Electronics",
+                    "value": 30
+                },
+                {
+                    "label": "Home & Kitchen",
+                    "value": 25
+                },
+                {
+                    "label": "Fashion",
+                    "value": 20
+                },
+                {
+                    "label": "Sports",
+                    "value": 15
+                },
+                {
+                    "label": "Books",
+                    "value": 10
+                }
+            ],
+            "colorScheme": "set2"
+        }
     }
 }
