@@ -4,7 +4,7 @@ import * as fs from 'fs';
 const router = express.Router();
 
 router.get('/', (req: Request, res: Response) => {
-    fs.readFile(__dirname + '/../db/dashboard.json', 'utf8', (err, data) => {
+    fs.readFile(__dirname + '/../db/allDashboardsData.json', 'utf8', (err, data) => {
         if (err) {
             console.error(err);
             return res.status(500).send('Internal Server Error');
@@ -18,7 +18,7 @@ router.get('/', (req: Request, res: Response) => {
 let count = 0
 router.get('/:id', (req: Request, res: Response) => {
     console.log("Inside GET /:id", count++)
-    fs.readFile(__dirname + '/../db/dashboard.json', 'utf8', (err, data: any) => {
+    fs.readFile(__dirname + '/../db/dashboardData.json', 'utf8', (err, data: any) => {
         if (err) {
             console.error(err);
             return res.status(500).send('Internal Server Error');
@@ -30,19 +30,15 @@ router.get('/:id', (req: Request, res: Response) => {
     });
 });
 
-router.get('/:id/widget/:id2', (req: Request, res: Response) => {
-    console.log("Inside GET widget /:id",)
-    fs.readFile(__dirname + '/../db/dashboard.json', 'utf8', (err, data: any) => {
+router.get('/widget/:id', (req: Request, res: Response) => {
+    fs.readFile(__dirname + '/../db/widgetsData.json', 'utf8', (err, data: any) => {
         if (err) {
             console.error(err);
             return res.status(500).send('Internal Server Error');
         }
-        console.log("req.params",)
-        const { id, id2 } = req.params
-        console.log('id2:', id2, 'id:', id)
+        const { id } = req.params
         const jsonData = JSON.parse(data);
-        const singleDashBoardData = jsonData[id].filter((el: any) => el._id === id2)
-        return res.send(singleDashBoardData[0] || {});
+        return res.send(jsonData[id]);
     });
 });
 
