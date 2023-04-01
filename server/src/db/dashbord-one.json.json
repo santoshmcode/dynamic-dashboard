@@ -1,0 +1,57 @@
+{
+    "cpuPerformance": {
+        "position": 1,
+        "title": "CPU Performance",
+        "value": "80%",
+        "icon": "cpu",
+        "color": "#36a2eb"
+    },
+    "cost": {
+        "position": 2,
+        "title": "Cost",
+        "value": "$500",
+        "icon": "dollar-sign",
+        "color": "#ff6384"
+    },
+    "memory": {
+        "position": 3,
+        "title": "Memory",
+        "value": "8GB",
+        "icon": "database",
+        "color": "#ffcd56"
+    },
+    "pieChart": {
+        "position": 4,
+        "title": "Sales by Region",
+        "data": [
+            {
+                "label": "North",
+                "value": 30
+            },
+            {
+                "label": "South",
+                "value": 25
+            },
+            {
+                "label": "East",
+                "value": 20
+            },
+            {
+                "label": "West",
+                "value": 25
+            }
+        ],
+        "colorScheme": "pastel"
+    },
+    "position": 5,
+    "randomList": {
+        "title": "Random List",
+        "items": [
+            "Item 1",
+            "Item 2",
+            "Item 3",
+            "Item 4",
+            "Item 5"
+        ]
+    }
+}
