@@ -133,7 +133,7 @@
         "xAxisLabel": "Months",
         "yAxisLabel": "Sales"
     },
-    "e6b5e40f-0ab4-4f22-8e4d-2dc5a6b4ad6a":{
+    "e6b5e40f-0ab4-4f22-8e4d-2dc5a6b4ad6a": {
         "type": {
             "name": "bar",
             "subtype": "graph"
@@ -162,7 +162,7 @@
         "xAxisLabel": "Regions",
         "yAxisLabel": "Sales"
     },
-    "02d2e80c-6675-4288-aabc-0d23451a7f71":{
+    "02d2e80c-6675-4288-aabc-0d23451a7f71": {
         "type": {
             "name": "table",
             "subtype": "table"
@@ -194,6 +194,12 @@
                 "name": "Lisa Brown",
                 "age": 35,
                 "email": "lisabrown@example.com"
+            },
+            {
+                "id": 5,
+                "name": "Jethalal Gadha",
+                "age": 45,
+                "email": "jetha@example.com"
             }
         ],
         "columns": [
@@ -211,11 +217,11 @@
             },
             {
                 "key": "email",
-                "header": "Email"
+                "header": "Email ID"
             }
         ]
     },
-    "b9b27121-bbfe-4267-9050-214aa3018c33":{
+    "b9b27121-bbfe-4267-9050-214aa3018c33": {
         "type": {
             "name": "pie",
             "subtype": "multi-graph"

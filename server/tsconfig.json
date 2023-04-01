@@ -9,6 +9,7 @@
   },
   "include": [
     "./src/**/*.ts",
-    "./src/routers/**/*.ts"
+    "./src/routers/**/*.ts",
+    "./src/types/**/*.ts"
   ]
 }
