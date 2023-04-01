@@ -42,7 +42,7 @@ router.get('/:id/widget/:id2', (req: Request, res: Response) => {
         console.log('id2:', id2, 'id:', id)
         const jsonData = JSON.parse(data);
         const singleDashBoardData = jsonData[id].filter((el: any) => el._id === id2)
-        return res.send(singleDashBoardData[0]);
+        return res.send(singleDashBoardData[0] || {});
     });
 });
 

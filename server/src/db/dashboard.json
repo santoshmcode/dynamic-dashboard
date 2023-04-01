@@ -3,7 +3,7 @@
         {
             "type": {
                 "name": "cpuPerformance",
-                "subtype": "normal"
+                "subtype": "card"
             },
             "_id": "7840a682-7dcf-406a-8e3a-840150d7f9d9",
             "position": 1,
@@ -15,7 +15,7 @@
         {
             "type": {
                 "name": "cost",
-                "subtype": "normal"
+                "subtype": "card"
             },
             "_id": "7f79d0e3-0f3a-4613-8743-d1e53dd8a140",
             "position": 2,
@@ -27,7 +27,7 @@
         {
             "type": {
                 "name": "memory",
-                "subtype": "normal"
+                "subtype": "card"
             },
             "_id": "d2c0cced-42fc-4e6f-befe-21f1faea27b6",
             "position": 3,
