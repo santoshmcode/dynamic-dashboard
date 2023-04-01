@@ -3,7 +3,7 @@ import cors from 'cors';
 import dashboardRouter from "./routers/dashboard.router"
 
 const app = express();
-const PORT = 3001;
+const PORT: number | string = process.env.PORT || 3001;
 
 app.use(express.json());
 app.use(cors());
