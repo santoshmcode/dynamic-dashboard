@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+a {
+    all: unset;
+    cursor: pointer;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    height: 84px;
+    background: #149bfc;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.navbar a {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: capitalize;
+    color: #ffffff;
+    padding: 10px;
+    border: 1px solid transparent;
+}
+
+.navbar a:hover {
+    font-weight: 600;
+    border: none;
+}

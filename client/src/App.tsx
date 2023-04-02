@@ -18,7 +18,9 @@ function App() {
   }, [])
   return (
     <div className="App">
-      {allDashboardsData.map(({route,lable,_id}) => <Link key={_id} to={route}>{ lable }</Link>)}
+      <nav className='navbar'>
+        {allDashboardsData.map(({ route, lable, _id }) => <Link key={_id} to={route}>{lable}</Link>)}
+      </nav>
       <Routers data={allDashboardsData} />
     </div>
   );

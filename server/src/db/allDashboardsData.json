@@ -3,12 +3,12 @@
         "_id": 1,
         "identifier": "dashboard-1",
         "route": "/",
-        "lable": "Dashboard-1"
+        "lable": "Dashboard One"
     },
     {
         "_id": 2,
         "identifier": "dashboard-2",
         "route": "/dashboard-2",
-        "lable": "Dashboard-2"
+        "lable": "Dashboard Two"
     }
 ]
