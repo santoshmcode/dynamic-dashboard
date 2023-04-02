@@ -52,3 +52,6 @@ a {
     width: 100%;
     padding: 30px;
 }
+.canvasjs-chart-credit {
+    display: none;
+}
