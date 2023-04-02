@@ -3,6 +3,7 @@ import { DashboardData, widgeSmallData } from "../../types/types";
 import PieGraph from "../graph/Pie";
 import LineGraph from "../graph/Line";
 import BarGraph from "../graph/Bar";
+import TableChart from "../graph/Table";
 
 interface Prop {
     data: DashboardData;
@@ -20,7 +21,11 @@ const Widget = ({ data }: Prop) => {
         <div>
             {subtype === "card" && <div>Card</div>}
             {subtype === "list" && <div>List</div>}
-            {subtype === "table" && <div>List</div>}
+            {subtype === "table" && (
+                <div>
+                    <TableChart id={data._id} />
+                </div>
+            )}
             {subtype === "multi-graph" && <div>Multi</div>}
             {subtype === "graph" && name === "pie" && (
                 <div>
