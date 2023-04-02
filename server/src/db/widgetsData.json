@@ -5,7 +5,6 @@
             "subtype": "card"
         },
         "_id": "7840a682-7dcf-406a-8e3a-840150d7f9d9",
-        "position": 1,
         "title": "CPU Performance",
         "value": "80%"
     },
@@ -15,7 +14,6 @@
             "subtype": "card"
         },
         "_id": "7f79d0e3-0f3a-4613-8743-d1e53dd8a140",
-        "position": 2,
         "title": "Cost",
         "value": "$500"
     },
@@ -25,7 +23,6 @@
             "subtype": "card"
         },
         "_id": "d2c0cced-42fc-4e6f-befe-21f1faea27b6",
-        "position": 3,
         "title": "Memory",
         "value": "8GB"
     },
@@ -35,7 +32,6 @@
             "subtype": "graph"
         },
         "_id": "a20fb0f9-8296-4f5a-b4c4-4c4d64c4a316",
-        "position": 4,
         "title": "Sales by Region",
         "data": [
             {
@@ -62,7 +58,6 @@
             "subtype": "list"
         },
         "_id": "74d3d3a7-92a1-4c8a-99f8-836ef1336c12",
-        "position": 5,
         "title": "Random List",
         "items": [
             "Item 1",
@@ -78,7 +73,6 @@
             "subtype": "graph"
         },
         "_id": "8d6ba3a3-02a6-4f2a-a0ea-5f6d7f89a38a",
-        "position": 1,
         "title": "Line Graph",
         "data": [
             {
@@ -139,7 +133,6 @@
             "subtype": "graph"
         },
         "_id": "e6b5e40f-0ab4-4f22-8e4d-2dc5a6b4ad6a",
-        "position": 2,
         "title": "Bar Graph",
         "data": [
             {
@@ -168,7 +161,6 @@
             "subtype": "table"
         },
         "_id": "02d2e80c-6675-4288-aabc-0d23451a7f71",
-        "position": 3,
         "title": "Tabular Data",
         "data": [
             {
@@ -227,7 +219,6 @@
             "subtype": "multi-graph"
         },
         "_id": "b9b27121-bbfe-4267-9050-214aa3018c33",
-        "position": 4,
         "title": "Sales by Category",
         "data": [
             {
@@ -236,7 +227,6 @@
                     "subtype": "graph"
                 },
                 "__id": "a20fb0f9-8296-4f5a-b4c4-4c4d64c4a3161",
-                "position": 1,
                 "title": "Sales by Region",
                 "data": [
                     {
@@ -263,7 +253,6 @@
                     "subtype": "graph"
                 },
                 "__id": "a20fb0f9-8296-4f5a-b4c4-4c4d64c4a3162",
-                "position": 2,
                 "title": "Sales by Region",
                 "data": [
                     {
@@ -290,7 +279,6 @@
                     "subtype": "graph"
                 },
                 "__id": "a20fb0f9-8296-4f5a-b4c4-4c4d64c4a3163",
-                "position": 3,
                 "title": "Sales by Region",
                 "data": [
                     {

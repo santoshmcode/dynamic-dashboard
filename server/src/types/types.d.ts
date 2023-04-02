@@ -6,6 +6,7 @@ interface Dashboard {
 interface DashboardData {
     [dashboardId: string]: {
         _id: string;
+        position: number;
     }[];
 }
 
@@ -15,7 +16,6 @@ interface Card {
         subtype: string;
     };
     _id: string;
-    position: number;
     title: string;
     value: string;
 }
@@ -26,7 +26,6 @@ interface List {
         subtype: string;
     };
     _id: string;
-    position: number;
     title: string;
     items: string[];
 }
@@ -37,7 +36,6 @@ interface PieGraph {
         subtype: string;
     };
     _id: string;
-    position: number;
     title: string;
     data: {
         label: string;
@@ -51,7 +49,6 @@ interface LineGraph {
         subtype: string;
     };
     _id: string;
-    position: number;
     title: string;
     data: {
         x: number;
@@ -67,7 +64,6 @@ interface BarGraph {
         subtype: string;
     };
     _id: string;
-    position: number;
     title: string;
     data: Array<{
         x: number | string;
@@ -83,7 +79,6 @@ interface TableData {
         subtype: string
     },
     _id: string,
-    position: number,
     title: string,
     data: {
         id: number,
@@ -103,7 +98,6 @@ interface MultiPieGraphData {
         subtype: 'multi-graph';
     };
     _id: string;
-    position: number;
     title: string;
     data: PieGraph[];
 }
