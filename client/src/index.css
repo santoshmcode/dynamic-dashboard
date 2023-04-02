@@ -80,7 +80,12 @@ a {
 .card > .card-title {
     font-size: 20px;
     text-align: center;
+    gap: 50px;
 }
 .card > .card-value {
     text-align: center;
+}
+.multi {
+    display: flex;
+    align-items: center;
 }

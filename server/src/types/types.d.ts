@@ -104,8 +104,8 @@ interface MultiPieGraphData {
         subtype: 'multi-graph';
     };
     _id: string;
-    title: string;
-    data: PieGraph[];
+    title?: string;
+    data?: PieGraph[];
 }
 
 interface Widget {

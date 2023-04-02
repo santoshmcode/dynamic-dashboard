@@ -227,78 +227,99 @@
                     "name": "pie",
                     "subtype": "graph"
                 },
-                "__id": "a20fb0f9-8296-4f5a-b4c4-4c4d64c4a3161",
-                "title": "Sales by Region",
-                "data": [
-                    {
-                        "label": "North",
-                        "value": 30
-                    },
-                    {
-                        "label": "South",
-                        "value": 25
-                    },
-                    {
-                        "label": "East",
-                        "value": 20
-                    },
-                    {
-                        "label": "West",
-                        "value": 25
-                    }
-                ]
+                "__id": "a20fb0f9-8296-4f5a-b4c4-4c4d64c4a3161"
             },
             {
                 "type": {
                     "name": "pie",
                     "subtype": "graph"
                 },
-                "__id": "a20fb0f9-8296-4f5a-b4c4-4c4d64c4a3162",
-                "title": "Sales by Region",
-                "data": [
-                    {
-                        "label": "North",
-                        "value": 30
-                    },
-                    {
-                        "label": "South",
-                        "value": 25
-                    },
-                    {
-                        "label": "East",
-                        "value": 20
-                    },
-                    {
-                        "label": "West",
-                        "value": 25
-                    }
-                ]
+                "__id": "a20fb0f9-8296-4f5a-b4c4-4c4d64c4a3162"
             },
             {
                 "type": {
                     "name": "pie",
                     "subtype": "graph"
                 },
-                "__id": "a20fb0f9-8296-4f5a-b4c4-4c4d64c4a3163",
-                "title": "Sales by Region",
-                "data": [
-                    {
-                        "label": "North",
-                        "value": 30
-                    },
-                    {
-                        "label": "South",
-                        "value": 25
-                    },
-                    {
-                        "label": "East",
-                        "value": 20
-                    },
-                    {
-                        "label": "West",
-                        "value": 25
-                    }
-                ]
+                "__id": "a20fb0f9-8296-4f5a-b4c4-4c4d64c4a3163"
+            }
+        ]
+    },
+    "a20fb0f9-8296-4f5a-b4c4-4c4d64c4a3161": {
+        "type": {
+            "name": "pie",
+            "subtype": "graph"
+        },
+        "__id": "a20fb0f9-8296-4f5a-b4c4-4c4d64c4a3161",
+        "title": "Sales by Region",
+        "data": [
+            {
+                "label": "North",
+                "value": 30
+            },
+            {
+                "label": "South",
+                "value": 25
+            },
+            {
+                "label": "East",
+                "value": 20
+            },
+            {
+                "label": "West",
+                "value": 25
+            }
+        ]
+    },
+    "a20fb0f9-8296-4f5a-b4c4-4c4d64c4a3162": {
+        "type": {
+            "name": "pie",
+            "subtype": "graph"
+        },
+        "__id": "a20fb0f9-8296-4f5a-b4c4-4c4d64c4a3162",
+        "title": "Sales by Region",
+        "data": [
+            {
+                "label": "North",
+                "value": 30
+            },
+            {
+                "label": "South",
+                "value": 25
+            },
+            {
+                "label": "East",
+                "value": 20
+            },
+            {
+                "label": "West",
+                "value": 25
+            }
+        ]
+    },
+    "a20fb0f9-8296-4f5a-b4c4-4c4d64c4a3163": {
+        "type": {
+            "name": "pie",
+            "subtype": "graph"
+        },
+        "__id": "a20fb0f9-8296-4f5a-b4c4-4c4d64c4a3163",
+        "title": "Sales by Region",
+        "data": [
+            {
+                "label": "North",
+                "value": 30
+            },
+            {
+                "label": "South",
+                "value": 25
+            },
+            {
+                "label": "East",
+                "value": 20
+            },
+            {
+                "label": "West",
+                "value": 25
             }
         ]
     }
