@@ -21,7 +21,9 @@ function App() {
       <nav className='navbar'>
         {allDashboardsData.map(({ route, lable, _id }) => <Link key={_id} to={route}>{lable}</Link>)}
       </nav>
-      <Routers data={allDashboardsData} />
+      <main className='main'>
+        <Routers data={allDashboardsData} />
+      </main>
     </div>
   );
 }

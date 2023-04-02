@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
 
+:root {
+    --nav-height: 84px;
+}
+
 *,
 *::after,
 *::before {
@@ -20,7 +24,7 @@ a {
     align-items: center;
     justify-content: center;
     gap: 35px;
-    height: 84px;
+    height: var(--nav-height);
     background: #149bfc;
     position: fixed;
     top: 0;
@@ -41,4 +45,10 @@ a {
 .navbar a:hover {
     font-weight: 600;
     border: none;
+}
+
+.main {
+    margin-top: var(--nav-height);
+    width: 100%;
+    padding: 30px;
 }

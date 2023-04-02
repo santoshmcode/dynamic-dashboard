@@ -9,6 +9,10 @@ interface DashboardData {
     [dashboardId: string]: {
         _id: string;
         position?: number;
+        type?: {
+            name: string;
+            subtype: string;
+        };
     }[];
 }
 

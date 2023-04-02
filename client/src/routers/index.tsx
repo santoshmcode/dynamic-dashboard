@@ -14,8 +14,8 @@ const Routers = ({data}:Props) => {
     <div>
       <Suspense fallback={<div>Loading...</div>}>  
         <Routes>
-          {data.map(({_id, route,lable}) =>
-            <Route key={_id} path={route} element={<Dashboard lable={lable} />} />
+          {data.map(({_id, route,lable,identifier}) =>
+            <Route key={_id} path={route} element={<Dashboard lable={lable} identifier={identifier} />} />
           )}
       </Routes>
        </Suspense>
