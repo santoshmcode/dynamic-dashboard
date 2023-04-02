@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { DashboardData } from '../../types/types';
 import { getDashboard } from '../../apis';
+import Widget from '../widget';
 
 interface Props {
   lable: string;
@@ -17,7 +18,7 @@ const Dashboard = ({lable,identifier}: Props) => {
     fetchDashboards()
   }, [identifier])
   return (
-      <div>  { lable} </div>
+   <div>{allDashboardsData.map((el, index)=> <div key={el._id}><Widget data={el} /></div>)}</div>
   )
 }
 

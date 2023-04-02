@@ -6,14 +6,21 @@ interface DashboardsInterface {
 }
 
 interface DashboardData {
-    [dashboardId: string]: {
-        _id: string;
-        position?: number;
-        type: {
-            name: string;
-            subtype: string;
-        };
-    }[];
+    _id: string;
+    position?: number;
+    type: {
+        name: string;
+        subtype: string;
+    };
 }
 
-export { DashboardsInterface, DashboardData }
+interface widgeSmallData {
+    _id: string;
+    type: {
+        name: string;
+        subtype: string;
+    };
+    position?: number;
+}
+
+export { DashboardsInterface, DashboardData, widgeSmallData }
