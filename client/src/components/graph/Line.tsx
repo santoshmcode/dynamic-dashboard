@@ -1,9 +1,14 @@
 import React, { useEffect, useRef, useState } from "react";
-import CanvasJSReact from "../../assets/canvasjs.react";
-import axios from "axios";
 import { getWidgetData } from "../../apis";
-
-const CanvasJSChart = CanvasJSReact.CanvasJSChart;
+import {
+    LineChart,
+    Line,
+    XAxis,
+    YAxis,
+    CartesianGrid,
+    Tooltip,
+    Legend,
+} from "recharts";
 
 interface LineGraph {
     position: number;
@@ -20,9 +25,8 @@ interface Prop {
     id: string;
 }
 
-const Line = ({ id }: Prop) => {
+const LineGraph = ({ id }: Prop) => {
     const [lineData, setLineData] = useState<LineGraph>();
-    const chartRef = useRef<typeof CanvasJSChart | null>(null);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -32,55 +36,35 @@ const Line = ({ id }: Prop) => {
         fetchData();
     }, [id]);
 
-    useEffect(() => {
-        if (
-            chartRef.current &&
-            lineData?.data.length &&
-            lineData?.data &&
-            lineData?.data.length > 0
-        ) {
-            chartRef.current.render();
-        }
-    }, [lineData]);
-
-    const options = {
-        animationEnabled: true,
-        theme: "light1",
-        title: {
-            text: lineData?.title,
-        },
-        axisY: {
-            title: lineData?.yAxisLabel,
-            suffix: "",
-        },
-        axisX: {
-            title: lineData?.yAxisLabel,
-            prefix: "",
-            interval: 2,
-        },
-        data: [
-            {
-                type: "line",
-                toolTipContent: "Week {x}: {y}%",
-                dataPoints: lineData?.data.map((item: any) => ({
-                    x: item.x,
-                    y: item.y,
-                })),
-            },
-        ],
-    };
-
     return (
         <div>
             {
-                <CanvasJSChart
-                    options={options}
-                    containerProps={{ width: "100%", height: "300px" }}
-                    onRef={(ref: any) => (chartRef.current = ref)}
-                />
+                <LineChart
+                    width={500}
+                    height={300}
+                    data={lineData?.data}
+                    margin={{
+                        top: 5,
+                        right: 30,
+                        left: 20,
+                        bottom: 5,
+                    }}
+                >
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis />
+                    <YAxis />
+                    <Tooltip />
+                    <Legend />
+                    <Line
+                        type="monotone"
+                        dataKey="y"
+                        stroke="#82ca9d"
+                        activeDot={{ r: 3 }}
+                    />
+                </LineChart>
             }
         </div>
     );
 };
 
-export default Line;
+export default LineGraph;

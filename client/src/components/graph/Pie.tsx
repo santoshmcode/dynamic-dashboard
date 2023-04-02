@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
-import CanvasJSReact from "../../assets/canvasjs.react";
+import { PieChart, Pie } from "recharts";
 import { getWidgetData } from "../../apis";
-const CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
 interface PieChart {
     type: {
@@ -22,7 +21,7 @@ interface Prop {
     id: string;
 }
 
-function Pie({ id }: Prop) {
+function PieGraph({ id }: Prop) {
     const [pieData, setPieData] = useState<PieChart>();
     useEffect(() => {
         const fetchData = async () => {
@@ -32,36 +31,24 @@ function Pie({ id }: Prop) {
         fetchData();
     }, [id]);
 
-    const options = {
-        animationEnabled: true,
-        title: {
-            text: pieData?.title,
-        },
-        data: [
-            {
-                type: "pie",
-                startAngle: 75,
-                toolTipContent: "<b>{label}</b>: {y}",
-                showInLegend: "true",
-                legendText: "{label}",
-                indexLabelFontSize: 16,
-                indexLabel: "{label} - {y}",
-                dataPoints: pieData?.data.map((item: any) => ({
-                    y: item.value,
-                    label: item.label,
-                })),
-            },
-        ],
-    };
 
     return (
         <div>
-            <CanvasJSChart
-                containerProps={{ width: "100%", height: "300px" }}
-                options={options}
-            />
+            <PieChart width={400} height={400}>
+                <Pie
+                    dataKey="value"
+                    startAngle={360}
+                    endAngle={0}
+                    data={pieData?.data}
+                    cx={200}
+                    cy={200}
+                    outerRadius={80}
+                    fill="#8884d8"
+                    label
+                />
+            </PieChart>
         </div>
     );
 }
 
-export default Pie;
+export default PieGraph;
