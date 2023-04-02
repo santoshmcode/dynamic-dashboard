@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { PieChart, Pie } from "recharts";
+import { PieChart, Pie, Tooltip } from "recharts";
 import { getWidgetData } from "../../apis";
 
 interface PieChart {
@@ -31,17 +31,26 @@ function PieGraph({ id }: Prop) {
         fetchData();
     }, [id]);
 
-
     return (
         <div>
-            <PieChart width={400} height={400}>
+            <PieChart
+                margin={{
+                    top: 30,
+                    right: 30,
+                    left: 30,
+                    bottom: 30,
+                }}
+                width={400}
+                height={400}
+            >
+                <Tooltip />
                 <Pie
                     dataKey="value"
                     startAngle={360}
                     endAngle={0}
                     data={pieData?.data}
-                    cx={200}
-                    cy={200}
+                    // cx={200}
+                    // cy={200}
                     outerRadius={80}
                     fill="#8884d8"
                     label

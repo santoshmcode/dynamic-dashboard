@@ -83,15 +83,14 @@ const TableChart = ({ id }: Prop) => {
     );
     return (
         <div>
-            <Box>
-                <Box width={"100%"} marginTop={3}>
-                    <h2>{tableData?.title}</h2>
+            <Box margin={"30px"}>
+                <Box width={"400px"} marginTop={3}>
                     <TableContainer component={Paper}>
                         <Table
-                            sx={{ minWidth: 450 }}
+                            // sx={{ minWidth: 450 }}
                             aria-label="caption table"
                         >
-                            <caption>Table</caption>
+                            <caption>{tableData?.title}</caption>
                             <TableHead>
                                 <TableRow>
                                     {columns.map((column) => (

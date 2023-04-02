@@ -44,10 +44,10 @@ const LineGraph = ({ id }: Prop) => {
                     height={300}
                     data={lineData?.data}
                     margin={{
-                        top: 5,
+                        top: 30,
                         right: 30,
-                        left: 20,
-                        bottom: 5,
+                        left: 30,
+                        bottom: 30,
                     }}
                 >
                     <CartesianGrid strokeDasharray="3 3" />

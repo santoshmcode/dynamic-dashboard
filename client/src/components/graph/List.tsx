@@ -27,7 +27,7 @@ const ListChart = ({ id }: Prop) => {
         fetchData();
     }, []);
     return (
-        <div style={{ width: "300px" }}>
+        <div style={{ width: "300px", margin: 40 }}>
             <CListGroup>
                 <h3>{listData?.title}</h3>
                 {listData?.items.map((items, index) => {
