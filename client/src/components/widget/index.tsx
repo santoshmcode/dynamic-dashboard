@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { DashboardData, widgeSmallData } from "../../types/types";
-import Pie from "../graph/Pie";
-import Line from "../graph/Line";
+import PieGraph from "../graph/Pie";
+import LineGraph from "../graph/Line";
+import BarGraph from "../graph/Bar";
 
 interface Prop {
     data: DashboardData;
@@ -23,15 +24,19 @@ const Widget = ({ data }: Prop) => {
             {subtype === "multi-graph" && <div>Multi</div>}
             {subtype === "graph" && name === "pie" && (
                 <div>
-                    <Pie id={data._id} />
+                    <PieGraph id={data._id} />
                 </div>
             )}
             {subtype === "graph" && name === "line" && (
                 <div>
-                    <Line id={data._id} />
+                    <LineGraph id={data._id} />
                 </div>
             )}
-            {subtype === "graph" && name === "bar" && <div>Bar</div>}
+            {subtype === "graph" && name === "bar" && (
+                <div>
+                    <BarGraph id={data._id} />
+                </div>
+            )}
         </div>
     );
 };
