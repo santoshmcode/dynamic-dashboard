@@ -6,7 +6,7 @@ interface Dashboard {
 interface DashboardData {
     [dashboardId: string]: {
         _id: string;
-        position: number;
+        position?: number;
     }[];
 }
 
