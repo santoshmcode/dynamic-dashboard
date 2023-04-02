@@ -1,6 +1,8 @@
 interface Dashboard {
     _id: number;
     identifier: string;
+    route: string;
+    lable: string;
 }
 
 interface DashboardData {

@@ -1,14 +1,24 @@
-import React from 'react'
+import React, { Suspense, lazy } from 'react'
 import { Routes, Route } from 'react-router-dom';
+import { DashboardsInterface } from '../types/types';
 
-const Routers = () => {
+
+const Dashboard = lazy(() => import('../components/dashboard'));
+
+interface Props {
+  data: DashboardsInterface[];
+}
+
+const Routers = ({data}:Props) => {  
   return (
-     <div>
-      <Routes>
-        <Route path="/" element={<>Dashboard-1</>} />
-        <Route path="/D2" element={<>Dashboard-2</>} />
-        <Route path="/D3" element={<>Dashboard-3</>} />
+    <div>
+      <Suspense fallback={<div>Loading...</div>}>  
+        <Routes>
+          {data.map(({_id, route,lable}) =>
+            <Route key={_id} path={route} element={<Dashboard lable={lable} />} />
+          )}
       </Routes>
+       </Suspense>
     </div>
   )
 }

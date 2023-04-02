@@ -1,16 +1,25 @@
-import React from 'react';
-
-import './App.css';
+import React, { useEffect, useState } from 'react';
 import Routers from './routers';
 import { Link } from 'react-router-dom';
+import './App.css';
+import { getAllDashboards } from './apis';
+import { DashboardsInterface } from './types/types';
+
+
 
 function App() {
+  const [allDashboardsData, setAllDashboardsData] = useState<DashboardsInterface[]>([])
+  useEffect(() => {
+    const fetchDashboards = async() => {
+      const data = await getAllDashboards()
+      setAllDashboardsData(data)
+    } 
+    fetchDashboards()
+  }, [])
   return (
     <div className="App">
-      <Link to="/">Dashbord 1</Link>
-      <Link to="/d2">Dashbord 2</Link>
-      <Link to="/d3">Dashbord 3</Link>
-      <Routers/>
+      {allDashboardsData.map(({route,lable,_id}) => <Link key={_id} to={route}>{ lable }</Link>)}
+      <Routers data={allDashboardsData} />
     </div>
   );
 }
