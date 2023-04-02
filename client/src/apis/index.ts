@@ -22,4 +22,16 @@ const getDashboard = async (identifier: string) => {
     }
 };
 
-export { getAllDashboards, getDashboard }
+const getWidgetData = async (_id: string) => {
+    try {
+        const response = await axios.get(`${API_BASE_URL}/widget/${_id}`);
+        return response.data;
+    } catch (error) {
+        console.error(error);
+        return null;
+    }
+};
+
+
+
+export { getAllDashboards, getDashboard, getWidgetData }
