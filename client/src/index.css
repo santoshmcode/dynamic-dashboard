@@ -56,3 +56,24 @@ a {
 .canvasjs-chart-credit {
     display: none;
 }
+
+.card {
+    border-radius: 20px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 30px;
+    margin: 30px 0;
+    background: #159bfc;
+    color: #ffffff;
+}
+
+.card > .card-title {
+    font-size: 20px;
+    text-align: center;
+}
+.card > .card-value {
+    text-align: center;
+}

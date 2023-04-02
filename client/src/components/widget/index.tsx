@@ -5,6 +5,7 @@ import LineGraph from "../graph/Line";
 import BarGraph from "../graph/Bar";
 import TableChart from "../graph/Table";
 import ListChart from "../graph/List";
+import CardChart from "../graph/Card";
 
 interface Prop {
     data: DashboardData;
@@ -20,7 +21,11 @@ const Widget = ({ data }: Prop) => {
 
     return (
         <div>
-            {subtype === "card" && <div>Card</div>}
+            {subtype === "card" && (
+                <div>
+                    <CardChart id={data._id} />
+                </div>
+            )}
             {subtype === "list" && (
                 <div>
                     <ListChart id={data._id} />
