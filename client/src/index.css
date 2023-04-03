@@ -59,10 +59,6 @@ a {
     align-items: center;
     justify-content: space-between;
 }
-.main > div > div > div {
-    border: 1px solid #149bfc;
-    border-radius: 30px;
-}
 
 .canvasjs-chart-credit {
     display: none;

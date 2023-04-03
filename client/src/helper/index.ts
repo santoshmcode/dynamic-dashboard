@@ -10,13 +10,13 @@ function convertToPx(width: string): number {
     } else if (width.endsWith("%")) {
         const percent = num / 100;
         const screenWidth = window.screen.width;
-        return Math.round(screenWidth * percent);
+        return Math.round(screenWidth * percent) - 50;
     } else if (width.endsWith("rem")) {
         const fontSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
-        return Math.round(num * fontSize);
+        return Math.round(num * fontSize) - 100;
     } else if (width.endsWith("em")) {
         const fontSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
-        return Math.round(num * fontSize);
+        return Math.round(num * fontSize) - 100;
     } else {
         // default to pixels if no unit specified
         return num;

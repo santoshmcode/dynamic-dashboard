@@ -40,8 +40,10 @@ function PieGraph({ id }: Prop) {
         <div>
             <PieChart
                 margin={{
-                    top: 30,
-                    bottom: 30,
+                    top: 10,
+                    bottom: 10,
+                    right: 10,
+                    left: 10,
                 }}
                 width={convertToPx(pieData?.layout.width || "400px")}
                 height={convertToPx(pieData?.layout.height || "400px")}
