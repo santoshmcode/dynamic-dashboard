@@ -152,12 +152,108 @@
         "xAxisLabel": "Months",
         "yAxisLabel": "Sales"
     },
+    "18d6ba3a3-02a6-4f2a-a0ea-5f6d7f89a38a": {
+        "type": {
+            "name": "line",
+            "subtype": "graph"
+        },
+        "_id": "18d6ba3a3-02a6-4f2a-a0ea-5f6d7f89a38a",
+        "title": "Line Graph",
+        "layout": {
+            "width": "50%",
+            "height": "500px"
+        },
+        "data": [
+            {
+                "x": 1,
+                "y": 10
+            },
+            {
+                "x": 2,
+                "y": 40
+            },
+            {
+                "x": 3,
+                "y": 15
+            },
+            {
+                "x": 4,
+                "y": 25
+            },
+            {
+                "x": 5,
+                "y": 89
+            },
+            {
+                "x": 6,
+                "y": 28
+            },
+            {
+                "x": 7,
+                "y": 45
+            },
+            {
+                "x": 8,
+                "y": 42
+            },
+            {
+                "x": 9,
+                "y": 38
+            },
+            {
+                "x": 10,
+                "y": 55
+            },
+            {
+                "x": 11,
+                "y": 50
+            },
+            {
+                "x": 12,
+                "y": 48
+            }
+        ],
+        "xAxisLabel": "Months",
+        "yAxisLabel": "Sales"
+    },
     "e6b5e40f-0ab4-4f22-8e4d-2dc5a6b4ad6a": {
         "type": {
             "name": "bar",
             "subtype": "graph"
         },
         "_id": "e6b5e40f-0ab4-4f22-8e4d-2dc5a6b4ad6a",
+        "title": "Bar Graph",
+        "layout": {
+            "width": "50%",
+            "height": "500px"
+        },
+        "data": [
+            {
+                "x": "North",
+                "y": 200
+            },
+            {
+                "x": "South",
+                "y": 150
+            },
+            {
+                "x": "East",
+                "y": 180
+            },
+            {
+                "x": "West",
+                "y": 120
+            }
+        ],
+        "xAxisLabel": "Regions",
+        "yAxisLabel": "Sales"
+    },
+    "1e6b5e40f-0ab4-4f22-8e4d-2dc5a6b4ad6a": {
+        "type": {
+            "name": "bar",
+            "subtype": "graph"
+        },
+        "_id": "1e6b5e40f-0ab4-4f22-8e4d-2dc5a6b4ad6a",
         "title": "Bar Graph",
         "layout": {
             "width": "50%",
@@ -246,12 +342,109 @@
             }
         ]
     },
+    "02d2e80cv-6675-4288-aabc-0d23451a7f71": {
+        "type": {
+            "name": "table",
+            "subtype": "table"
+        },
+        "_id": "02d2e80cv-6675-4288-aabc-0d23451a7f71",
+        "title": "Tabular Data",
+        "layout": {
+            "width": "35%",
+            "height": "500px"
+        },
+        "data": [
+            {
+                "id": 1,
+                "name": "John Doe",
+                "age": 30,
+                "email": "johndoe@example.com"
+            },
+            {
+                "id": 2,
+                "name": "Jane Smith",
+                "age": 25,
+                "email": "janesmith@example.com"
+            },
+            {
+                "id": 3,
+                "name": "Bob Johnson",
+                "age": 40,
+                "email": "bobjohnson@example.com"
+            },
+            {
+                "id": 4,
+                "name": "Lisa Brown",
+                "age": 35,
+                "email": "lisabrown@example.com"
+            },
+            {
+                "id": 5,
+                "name": "Jethalal Gadha",
+                "age": 45,
+                "email": "jetha@example.com"
+            }
+        ],
+        "columns": [
+            {
+                "key": "id",
+                "header": "ID"
+            },
+            {
+                "key": "name",
+                "header": "Name"
+            },
+            {
+                "key": "age",
+                "header": "Age"
+            },
+            {
+                "key": "email",
+                "header": "Email ID"
+            }
+        ]
+    },
     "b9b27121-bbfe-4267-9050-214aa3018c33": {
         "type": {
             "name": "pie",
             "subtype": "multi-graph"
         },
         "_id": "b9b27121-bbfe-4267-9050-214aa3018c33",
+        "title": "Sales by Category",
+        "layout": {
+            "width": "60%",
+            "height": "500px"
+        },
+        "data": [
+            {
+                "type": {
+                    "name": "pie",
+                    "subtype": "graph"
+                },
+                "__id": "a20fb0f9-8296-4f5a-b4c4-4c4d64c4a3161"
+            },
+            {
+                "type": {
+                    "name": "pie",
+                    "subtype": "graph"
+                },
+                "__id": "a20fb0f9-8296-4f5a-b4c4-4c4d64c4a3162"
+            },
+            {
+                "type": {
+                    "name": "pie",
+                    "subtype": "graph"
+                },
+                "__id": "a20fb0f9-8296-4f5a-b4c4-4c4d64c4a3163"
+            }
+        ]
+    },
+    "xb9b27121-bbfe-4267-9050-214aa3018c33": {
+        "type": {
+            "name": "pie",
+            "subtype": "multi-graph"
+        },
+        "_id": "xb9b27121-bbfe-4267-9050-214aa3018c33",
         "title": "Sales by Category",
         "layout": {
             "width": "60%",
