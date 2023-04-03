@@ -166,27 +166,27 @@
         "data": [
             {
                 "x": 1,
-                "y": 10
+                "y": 100
             },
             {
                 "x": 2,
-                "y": 40
+                "y": 140
             },
             {
                 "x": 3,
-                "y": 15
+                "y": 115
             },
             {
                 "x": 4,
-                "y": 25
+                "y": 125
             },
             {
                 "x": 5,
-                "y": 89
+                "y": 189
             },
             {
                 "x": 6,
-                "y": 28
+                "y": 280
             },
             {
                 "x": 7,
@@ -198,19 +198,19 @@
             },
             {
                 "x": 9,
-                "y": 38
+                "y": 138
             },
             {
                 "x": 10,
-                "y": 55
+                "y": 155
             },
             {
                 "x": 11,
-                "y": 50
+                "y": 150
             },
             {
                 "x": 12,
-                "y": 48
+                "y": 180
             }
         ],
         "xAxisLabel": "Months",
@@ -262,19 +262,19 @@
         "data": [
             {
                 "x": "North",
-                "y": 200
+                "y": 20
             },
             {
                 "x": "South",
-                "y": 150
+                "y": 50
             },
             {
                 "x": "East",
-                "y": 180
+                "y": 18
             },
             {
                 "x": "West",
-                "y": 120
+                "y": 20
             }
         ],
         "xAxisLabel": "Regions",
@@ -295,31 +295,31 @@
             {
                 "id": 1,
                 "name": "John Doe",
-                "age": 30,
+                "age": 17,
                 "email": "johndoe@example.com"
             },
             {
                 "id": 2,
                 "name": "Jane Smith",
-                "age": 25,
+                "age": 15,
                 "email": "janesmith@example.com"
             },
             {
                 "id": 3,
                 "name": "Bob Johnson",
-                "age": 40,
+                "age": 22,
                 "email": "bobjohnson@example.com"
             },
             {
                 "id": 4,
                 "name": "Lisa Brown",
-                "age": 35,
+                "age": 44,
                 "email": "lisabrown@example.com"
             },
             {
                 "id": 5,
                 "name": "Jethalal Gadha",
-                "age": 45,
+                "age": 33,
                 "email": "jetha@example.com"
             }
         ],
@@ -488,19 +488,19 @@
         "data": [
             {
                 "label": "North",
-                "value": 30
+                "value": 55
             },
             {
                 "label": "South",
-                "value": 25
+                "value": 92
             },
             {
                 "label": "East",
-                "value": 20
+                "value": 16
             },
             {
                 "label": "West",
-                "value": 25
+                "value": 17
             }
         ]
     },
@@ -518,7 +518,7 @@
         "data": [
             {
                 "label": "North",
-                "value": 30
+                "value": 65
             },
             {
                 "label": "South",
@@ -526,11 +526,11 @@
             },
             {
                 "label": "East",
-                "value": 20
+                "value": 83
             },
             {
                 "label": "West",
-                "value": 25
+                "value": 53
             }
         ]
     },
@@ -548,19 +548,19 @@
         "data": [
             {
                 "label": "North",
-                "value": 30
+                "value": 90
             },
             {
                 "label": "South",
-                "value": 25
+                "value": 34
             },
             {
                 "label": "East",
-                "value": 20
+                "value": 32
             },
             {
                 "label": "West",
-                "value": 25
+                "value": 78
             }
         ]
     },

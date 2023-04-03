@@ -10,5 +10,11 @@
         "identifier": "dashboard-2",
         "route": "/dashboard-2",
         "lable": "Dashboard Two"
+    },
+    {
+        "_id": 3,
+        "identifier": "dashboard-3",
+        "route": "/dashboard-3",
+        "lable": "Dashboard Three"
     }
 ]
