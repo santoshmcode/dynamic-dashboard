@@ -4,6 +4,7 @@ import axios from "axios";
 import { CListGroup, CListGroupItem } from "@coreui/react";
 import { getWidgetData } from "../../apis";
 import { convertToPx } from "../../helper";
+import { useInView } from "react-intersection-observer";
 interface ListData {
     type: {
         name: string;
@@ -24,15 +25,23 @@ interface Prop {
 
 const ListChart = ({ id }: Prop) => {
     const [listData, setListData] = useState<ListData>();
+    const { ref, inView } = useInView({
+        threshold: 0.1,
+        triggerOnce: true,
+    });
+
     useEffect(() => {
-        const fetchData = async () => {
-            const data: ListData = await getWidgetData(id);
-            setListData(data);
-        };
-        fetchData();
-    }, []);
+        if (inView) {
+            const fetchData = async () => {
+                const data: ListData = await getWidgetData(id);
+                setListData(data);
+            };
+            fetchData();
+        }
+    }, [inView]);
     return (
         <div
+            ref={ref}
             style={{
                 width: `${convertToPx(listData?.layout.width || "300px")}`,
                 margin: 30,

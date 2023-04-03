@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { CRow, CCol, CWidgetStatsB } from "@coreui/react";
 import { getWidgetData } from "../../apis";
 import { convertToPx } from "../../helper";
+import { useInView } from "react-intersection-observer";
 
 interface CardData {
     type: {
@@ -23,16 +24,23 @@ interface Prop {
 
 const CardChart = ({ id }: Prop) => {
     const [cardData, setCardData] = useState<CardData>();
+    const { ref, inView } = useInView({
+        threshold: 0.1,
+        triggerOnce: true,
+    });
 
     useEffect(() => {
-        const fetchData = async () => {
-            const data: CardData = await getWidgetData(id);
-            setCardData(data);
-        };
-        fetchData();
-    }, []);
+        if (inView) {
+            const fetchData = async () => {
+                const data: CardData = await getWidgetData(id);
+                setCardData(data);
+            };
+            fetchData();
+        }
+    }, [inView]);
     return (
         <div
+            ref={ref}
             style={{
                 width: convertToPx(cardData?.layout.width || "200px"),
                 height: convertToPx(cardData?.layout.height || "200px"),

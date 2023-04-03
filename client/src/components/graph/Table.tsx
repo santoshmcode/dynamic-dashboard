@@ -12,6 +12,7 @@ import {
 import { Box } from "@mui/system";
 import { getWidgetData } from "../../apis";
 import { convertToPx } from "../../helper";
+import { useInView } from "react-intersection-observer";
 
 interface TableData {
     type: {
@@ -63,16 +64,22 @@ const TableChart = ({ id }: Prop) => {
     const [tableData, setTableData] = useState<TableData>();
     const [tabular, setTabular] = useState<TableItem[]>([]);
     const [columns, setColumns] = useState<ColumnItem[]>([]);
+    const { ref, inView } = useInView({
+        threshold: 0.1,
+        triggerOnce: true,
+    });
 
     useEffect(() => {
-        const fetchData = async () => {
-            const data: TableData = await getWidgetData(id);
-            setTableData(data);
-            setTabular(data.data);
-            setColumns(data.columns);
-        };
-        fetchData();
-    }, []);
+        if (inView) {
+            const fetchData = async () => {
+                const data: TableData = await getWidgetData(id);
+                setTableData(data);
+                setTabular(data.data);
+                setColumns(data.columns);
+            };
+            fetchData();
+        }
+    }, [inView]);
 
     const createData = (
         id: number,
@@ -87,7 +94,7 @@ const TableChart = ({ id }: Prop) => {
         createData(item.id, item.name, item.age, item.email)
     );
     return (
-        <div>
+        <div ref={ref}>
             <Box margin={"30px"}>
                 <Box
                     width={convertToPx(tableData?.layout.width || "400px")}

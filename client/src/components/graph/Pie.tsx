@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { PieChart, Pie, Tooltip } from "recharts";
 import { getWidgetData } from "../../apis";
 import { convertToPx } from "../../helper";
+import { useInView } from "react-intersection-observer";
 
 interface PieChart {
     type: {
@@ -28,16 +29,23 @@ interface Prop {
 
 function PieGraph({ id }: Prop) {
     const [pieData, setPieData] = useState<PieChart>();
+    const { ref, inView } = useInView({
+        threshold: 0.1,
+        triggerOnce: true,
+    });
+
     useEffect(() => {
-        const fetchData = async () => {
-            const data: PieChart = await getWidgetData(id);
-            setPieData(data);
-        };
-        fetchData();
-    }, [id]);
+        if (inView) {
+            const fetchData = async () => {
+                const data: PieChart = await getWidgetData(id);
+                setPieData(data);
+            };
+            fetchData();
+        }
+    }, [inView]);
 
     return (
-        <div>
+        <div ref={ref}>
             <PieChart
                 margin={{
                     top: 10,
