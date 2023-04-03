@@ -11,11 +11,16 @@ import {
 } from "@mui/material";
 import { Box } from "@mui/system";
 import { getWidgetData } from "../../apis";
+import { convertToPx } from "../../helper";
 
 interface TableData {
     type: {
         name: "table";
         subtype: "table";
+    };
+    layout: {
+        width: string;
+        height: string;
     };
     _id: string;
     title: string;
@@ -84,7 +89,10 @@ const TableChart = ({ id }: Prop) => {
     return (
         <div>
             <Box margin={"30px"}>
-                <Box width={"400px"} marginTop={3}>
+                <Box
+                    width={convertToPx(tableData?.layout.width || "400px")}
+                    marginTop={3}
+                >
                     <TableContainer component={Paper}>
                         <Table
                             // sx={{ minWidth: 450 }}

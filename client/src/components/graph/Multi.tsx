@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getWidgetData } from "../../apis";
 import PieGraph from "./Pie";
+import { convertToPx } from "../../helper";
 
 interface MultiData {
     type: {
@@ -8,6 +9,10 @@ interface MultiData {
         subtype: "multi-graph";
     };
     _id: string;
+    layout: {
+        width: string;
+        height: string;
+    };
     title: string;
     data: {
         type: {
@@ -34,7 +39,10 @@ const MultiChart = ({ id }: Porp) => {
     }, []);
 
     return (
-        <div style={{ width: 500 }} className="multi">
+        <div
+            style={{ width: convertToPx(multiData?.layout.width || "500px") }}
+            className="multi"
+        >
             {multiData?.data.map((el, index) => (
                 <div key={index}>
                     <PieGraph id={el.__id} />

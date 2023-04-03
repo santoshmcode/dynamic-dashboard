@@ -9,6 +9,7 @@ import {
     Tooltip,
     Legend,
 } from "recharts";
+import { convertToPx } from "../../helper";
 
 interface LineGraph {
     position: number;
@@ -17,6 +18,10 @@ interface LineGraph {
         x: string;
         y: number;
     }>;
+    layout: {
+        width: string;
+        height: string;
+    };
     xAxisLabel: string;
     yAxisLabel: string;
     color: string;
@@ -40,13 +45,11 @@ const LineGraph = ({ id }: Prop) => {
         <div>
             {
                 <LineChart
-                    width={500}
-                    height={300}
+                    width={convertToPx(lineData?.layout.width || "500px")}
+                    height={convertToPx(lineData?.layout.height || "300px")}
                     data={lineData?.data}
                     margin={{
                         top: 30,
-                        right: 30,
-                        left: 30,
                         bottom: 30,
                     }}
                 >

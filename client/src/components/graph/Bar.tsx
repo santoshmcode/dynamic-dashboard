@@ -9,10 +9,15 @@ import {
     Legend,
 } from "recharts";
 import { getWidgetData } from "../../apis";
+import { convertToPx } from "../../helper";
 
 interface BarChart {
     position: number;
     title: string;
+    layout: {
+        width: string;
+        height: string;
+    };
     data: Array<{
         x: string;
         y: number;
@@ -40,13 +45,11 @@ const BarGraph = ({ id }: Prop) => {
     return (
         <div>
             <BarChart
-                width={500}
-                height={300}
+                width={convertToPx(barData?.layout.width || "500px")}
+                height={convertToPx(barData?.layout.height || "300px")}
                 data={barData?.data}
                 margin={{
                     top: 30,
-                    right: 30,
-                    left: 30,
                     bottom: 30,
                 }}
             >

@@ -1,11 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { PieChart, Pie, Tooltip } from "recharts";
 import { getWidgetData } from "../../apis";
+import { convertToPx } from "../../helper";
 
 interface PieChart {
     type: {
         name: string;
         subtype: string;
+    };
+    layout: {
+        width: string;
+        height: string;
     };
     _id: string;
     position: number;
@@ -36,12 +41,10 @@ function PieGraph({ id }: Prop) {
             <PieChart
                 margin={{
                     top: 30,
-                    right: 30,
-                    left: 30,
                     bottom: 30,
                 }}
-                width={400}
-                height={400}
+                width={convertToPx(pieData?.layout.width || "400px")}
+                height={convertToPx(pieData?.layout.height || "400px")}
             >
                 <Tooltip />
                 <Pie

@@ -24,12 +24,20 @@ interface Card {
     _id: string;
     title: string;
     value: string;
+    layout: {
+        width: string;
+        height: string
+    };
 }
 
 interface List {
     type: {
         name: string;
         subtype: string;
+    };
+    layout: {
+        width: string;
+        height: string
     };
     _id: string;
     title: string;
@@ -40,6 +48,10 @@ interface PieGraph {
     type: {
         name: string;
         subtype: string;
+    };
+    layout: {
+        width: string;
+        height: string
     };
     _id: string;
     title: string;
@@ -53,6 +65,10 @@ interface LineGraph {
     type: {
         name: string;
         subtype: string;
+    };
+    layout: {
+        width: string;
+        height: string
     };
     _id: string;
     title: string;
@@ -69,6 +85,10 @@ interface BarGraph {
         name: string;
         subtype: string;
     };
+    layout: {
+        width: string;
+        height: string
+    };
     _id: string;
     title: string;
     data: Array<{
@@ -84,6 +104,10 @@ interface TableData {
         name: string,
         subtype: string
     },
+    layout: {
+        width: string;
+        height: string
+    };
     _id: string,
     title: string,
     data: {
@@ -102,6 +126,10 @@ interface MultiPieGraphData {
     type: {
         name: 'pie';
         subtype: 'multi-graph';
+    };
+    layout: {
+        width: string;
+        height: string
     };
     _id: string;
     title?: string;
