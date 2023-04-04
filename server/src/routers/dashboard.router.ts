@@ -1,7 +1,7 @@
 import express, { Request, Response } from 'express';
 import * as fs from 'fs';
-import { Dashboard, DashboardData, Widget } from '../types/types';
-import { changePositionOfWidget } from "../helper"
+import { Dashboard, DashboardData, Widget } from '../types/types.d.js';
+import { changePositionOfWidget } from "../helper/index.js"
 
 const router = express.Router();
 

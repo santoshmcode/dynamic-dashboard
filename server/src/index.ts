@@ -1,6 +1,6 @@
 import express from "express";
 import cors from 'cors';
-import dashboardRouter from "./routers/dashboard.router"
+import dashboardRouter from "./routers/dashboard.router.js"
 
 const app = express();
 const PORT: number | string = process.env.PORT || 3001;
