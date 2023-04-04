@@ -39,4 +39,4 @@ This API is used to change the position of a widget in a particular dashboard. `
 -   Create a new POST request and enter the API endpoint URL: http://localhost:3001/api/:id/widget/:id2.
 -   In the request body, enter the new position for the widget: {"position": 1}.
 -   Send the request.
--   The response will contain an array of widget objects with updated positions.
+-   The response will contain an array of widget objects with updated positions
